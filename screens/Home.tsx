@@ -1,44 +1,38 @@
-import { View, Text, Button, Pressable, TouchableOpacity } from "react-native";
+import {
+  View,
+  Text,
+  Button,
+  Pressable,
+  TouchableOpacity,
+  Image,
+} from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { StyleSheet } from "react-native";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+
+const user = require("../assets/user.png");
 
 const Home = ({ navigation }) => {
   return (
-    <SafeAreaView className="flex-1 bg-primary items-center justify-center space-y-10 ">
-      <TouchableOpacity
-        style={style.btn}
-        onPress={() => navigation.navigate("CreateTrip")}
-      >
-        <Text style={style.text}>Plan New Trip</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={style.btn}
-        onPress={() => navigation.navigate("ViewTrip")}
-      >
-        <Text style={style.text}>View Existing Trips</Text>
-      </TouchableOpacity>
+    <SafeAreaView className="flex-1 bg-[#F1F6F7]">
+      <View className="w-full  h-14 flex flex-row items-center justify-between px-2">
+        <View className="flex flex-row items-center justify-center w-1/3 space-x-2">
+          <TouchableOpacity
+            className="rounded-full object-contain"
+            onPress={() => navigation.navigate("CreateTrip")}
+          >
+            <Image source={user}></Image>
+          </TouchableOpacity>
+          <Text className="font-medium text-base ">Hi, Yash!</Text>
+        </View>
+        <View className=" flex flex-row justify-end bg-[#ffffff] shadow-xl shadow-primary rounded-full p-2">
+          <TouchableOpacity className="rounded-full object-contain ">
+            <Icon name="bell-outline" size={20} color="#FF971D" />
+          </TouchableOpacity>
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
-
-const style = StyleSheet.create({
-  btn: {
-    borderRadius: 8,
-    color: "#fff",
-    borderColor: "#fff",
-    borderWidth: 1,
-    height: 70,
-    width: 300,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    padding: 10,
-    fontSize: 20,
-    color: "#fff",
-  },
-});
 
 export default Home;
