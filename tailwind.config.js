@@ -11,6 +11,11 @@ module.exports = {
     extend: {},
     colors: {
       primary: "#242424",
+      white: "#FFFFFF",
+      offwhite: "#F9F6F7",
+      orange: "#FF971D",
+      lightOrange: "#FFE8D6",
+      gray: "#E0E0E0",
     },
   },
   plugins: [],
