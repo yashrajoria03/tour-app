@@ -5,7 +5,8 @@ import Home from "./screens/Home";
 import Loading from "./screens/Loading";
 import { useEffect, useState, useRef } from "react";
 import CreateTrip from "./screens/Trip/CreateTrip";
-import ViewTrip from "./screens/Trip/ViewTrip";
+import ViewTrip from "./screens/Trip/PastTrip";
+import PastTrip from "./screens/Trip/PastTrip";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,13 +30,13 @@ const App = () => {
           />
         )} */}
         <Stack.Screen
-          name="Home"
-          component={Home}
+          name="PastTrip"
+          component={PastTrip}
           options={{ headerShown: false }}
         />
         <Stack.Screen
-          name="ViewTrip"
-          component={ViewTrip}
+          name="Home"
+          component={Home}
           options={{ headerShown: false }}
         />
         <Stack.Screen
