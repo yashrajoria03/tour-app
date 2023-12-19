@@ -7,6 +7,7 @@ import { useEffect, useState, useRef } from "react";
 import CreateTrip from "./screens/Trip/CreateTrip";
 import ViewTrip from "./screens/Trip/PastTrip";
 import PastTrip from "./screens/Trip/PastTrip";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const Stack = createNativeStackNavigator();
 
