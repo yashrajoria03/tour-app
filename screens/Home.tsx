@@ -17,7 +17,7 @@ const Home = ({ navigation }) => {
   const [search, setSearch] = useState(null);
 
   const handleSearch = (e): void => {
-    setSearch(e.target.value);
+    setSearch(e);
   };
 
   return (
@@ -43,10 +43,13 @@ const Home = ({ navigation }) => {
         <Text className="font-bold text-4xl text-primary">your next trip?</Text>
         <View className="rounded-md w-full h-12 mt-4 flex items-center justify-center bg-white shadow-xl shadow-primary">
           <TextInput
-            onChangeText={(e) => handleSearch}
+            onChangeText={(e) => handleSearch(e)}
             placeholder="Search for a place"
             className="rounded-md w-[93%] h-12 px-2 py-3 text-xl  text-[#272829]"
             autoFocus={false}
+            onSubmitEditing={() =>
+              navigation.navigate("CreateTrip", { place: search })
+            }
             placeholderTextColor={"#E0E0E0"}
           />
         </View>

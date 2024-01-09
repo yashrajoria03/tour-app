@@ -8,6 +8,7 @@ import CreateTrip from "./screens/Trip/CreateTrip";
 import ViewTrip from "./screens/Trip/PastTrip";
 import PastTrip from "./screens/Trip/PastTrip";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import EnterTrip from "./screens/Trip/EnterTrip";
 
 const Stack = createNativeStackNavigator();
 
@@ -31,11 +32,6 @@ const App = () => {
           />
         )} */}
         <Stack.Screen
-          name="PastTrip"
-          component={PastTrip}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
           name="Home"
           component={Home}
           options={{ headerShown: false }}
@@ -43,6 +39,11 @@ const App = () => {
         <Stack.Screen
           name="CreateTrip"
           component={CreateTrip}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="PastTrip"
+          component={PastTrip}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
