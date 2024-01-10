@@ -1,5 +1,4 @@
 import { View, Text, Image, TextInput, ScrollView } from "react-native";
-import React from "react";
 import Icon from "react-native-vector-icons/MaterialIcons";
 import Icon2 from "react-native-vector-icons/MaterialCommunityIcons";
 import { SafeAreaView } from "react-native-safe-area-context";
